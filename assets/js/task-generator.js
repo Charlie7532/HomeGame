@@ -97,6 +97,11 @@ function displayTasksByRoom(data, roomIdOrName = null) {
 }
 
 function set_task(task_id) {
-	console.log('selected task', task_id);
+	gameData.taskid = task_id;
+	gameData.userid = User.id;
+	userid_from = User.id === 'P001' ? 'P002' : 'P001';
+
+	console.log('Task selected: ', task_id);
+	callGame(gameData);
 	set_menu(5);
 }

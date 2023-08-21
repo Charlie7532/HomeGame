@@ -47,9 +47,10 @@ function generateRoomCards(roomArray) {
 }
 
 function set_room(roomId) {
+	gameData.roomid=roomId;
+	displayTasksByRoom(gameData, roomId);
 	console.log('Room selected:', roomId);
 	set_menu(2);
-	displayTasksByRoom(gameData, roomId);
 }
 
 function buildRooms() {

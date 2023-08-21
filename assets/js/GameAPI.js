@@ -13,6 +13,7 @@ async function callGame(obj) {
 	url += `&t=${obj.taskid}`;
 	url += `&r=${obj.roomid}`;
 	url += `&s=${obj.userid_from}`;
+	console.log("Printing URL: ", url);
 
 	const result = await fetch(GameURL);
 	const R = result.json().then((data) => {
