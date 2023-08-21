@@ -15,9 +15,10 @@ async function callGame(obj) {
 	url += `&s=${obj.userid_from}`;
 	console.log("Printing URL: ", url);
 
-	const result = await fetch(GameURL);
+	const result = await fetch(url);
 	const R = result.json().then((data) => {
 		gameASN = data.data;
+		set_menu(5);
 	});
 
 	console.log('get Data:', R);

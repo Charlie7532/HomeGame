@@ -75,6 +75,10 @@ main {
 	transition: opacity 0.2s ease;
 }
 
+.full_vert{
+    min-height: 100vh !important;
+}
+
 .c_box {
 	position: relative;
 	background-color: transparent;
