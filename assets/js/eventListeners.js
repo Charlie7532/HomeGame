@@ -14,7 +14,10 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 	var instancesFormSelect = M.FormSelect.init(document.querySelectorAll('select'));
-	var instancesModal = M.Modal.init(document.querySelectorAll('.modal'));
+	var instancesModal = M.Modal.init(document.querySelectorAll('.modal'),{
+		opacity:1,
+		dismissible:false,
+	});
 	var instancesCollapsible = M.Collapsible.init(document.querySelectorAll('.collapsible'));
 	var instancesSidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'));
 	var instance = M.Tabs.init(document.querySelectorAll('.tabs-swipe-demo'), { swipeable: true, responsiveThreshold: Infinity });

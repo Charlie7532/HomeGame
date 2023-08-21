@@ -1,5 +1,5 @@
 /** @format */
-const GameURL ='https://script.google.com/macros/s/AKfycbzbR2DM1dtKeCkAN3bO-uU5mbr1lGSy6U07VypZSHBcZgVrp0tfyQt1vUYxOh5PuJ1Y/exec';
+const GameURL = 'https://script.google.com/macros/s/AKfycbzbR2DM1dtKeCkAN3bO-uU5mbr1lGSy6U07VypZSHBcZgVrp0tfyQt1vUYxOh5PuJ1Y/exec';
 
 let gameData;
 
@@ -13,12 +13,19 @@ async function callGame(obj) {
 	url += `&t=${obj.taskid}`;
 	url += `&r=${obj.roomid}`;
 	url += `&s=${obj.userid_from}`;
-	console.log("Printing URL: ", url);
+	console.log('Printing URL: ', url);
 
 	const result = await fetch(url);
 	const R = result.json().then((data) => {
 		gameASN = data.data;
-		set_menu(5);
+
+		console.log('answuer data: ', data);
+		if (data.status == 200) {
+			set_menu('success');
+		} else {
+			console.log('error: ', data.error);
+			set_menu('failure');
+		}
 	});
 
 	console.log('get Data:', R);
