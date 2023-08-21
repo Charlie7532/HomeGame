@@ -83,9 +83,8 @@ main {
 	position: relative;
 	background-color: transparent;
 	max-width: 1000px;
-	width: 100%;
 	padding: 20px 10px;
-	margin: auto;
+	margin: 15px;
 	border-radius: 20px;
 }
 @media (min-width: 1000px) {

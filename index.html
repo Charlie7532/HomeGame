@@ -174,21 +174,27 @@
 							<!-- <i class="material-icons larger " style="color:#43a047; font-size: 5rem; ">check_circle</i> -->
 							<img src="https://webstockreview.net/images/check-clipart-gif-animation-18.gif" style="width: 100%" alt="Check GIF" />
 
-							<h2>Activacion completada con exito</h2>
+							<h2>success</h2>
 							<hr />
-							<p>La activacion se ha completado exitosamente ahora puedes cerrar esta pestaña o realizar una nueva activacion</p>
+							<p>The activation has been completed successfully now you can close this tab or perform a new task</p>
 
-							<a class="btn waves-effect waves-light" onclick="back()" href="#f">Nueva Activacion</a>
+							<a class="btn waves-effect waves-light" onclick="back()" href="#f"><i class="material-icons">arrow_back </i> Back to home</a>
+							<a class="btn waves-effect waves-light" onclick="start_game()" href="#f"><i class="material-icons">check </i> New Task </a>
+
 						</div>
 					</div>
 				</section>
 
 				<section id="failure" class="vr-box box-1" style="display: none">
+					<br /><br /><br />
 					<div class="c_box card">
+						<img src="https://media0.giphy.com/media/Za2tDu8ftGxBn34m6s/source.gif" style="max-width: 100%; padding: 0 10px" alt="Check GIF" />
+
 						<div class="c_box_content row center-align">
-							<h2 style="color: red">La activacion ha fallado</h2>
-							<p>Algo ha salido mal, por favor vuelve a intentarlo nuevamente si el problema persiste contactate con soporte tecnico.</p>
-							<a class="btn waves-effect waves-light" onclick="back()" href="#f">Intentar de nuevo</a>
+							<h2 style="color: red">Activation failed</h2>
+							<p></p>
+							<a class="btn waves-effect waves-light" onclick="back()" href="#f"><i class="material-icons">arrow_back </i> Back to home</a>
+							<a class="btn waves-effect waves-light" onclick="tryAgain()" href="#f"><i class="material-icons">refresh </i> Try again </a>
 						</div>
 					</div>
 				</section>
@@ -203,7 +209,7 @@
 			<div id="login" class="modal">
 				<h5 class="modal-close">&#10005;</h5>
 				<div class="modal-content">
-					<h2 style="text-transform: uppercase;">housekeeping gameday</h2>
+					<h2 style="text-transform: uppercase">housekeeping gameday</h2>
 					<h3 class="center">Please sign in</h3>
 
 					<form name="loginForm" id="loginForm" class="form" style="padding-left: 30px; padding-right: 30px">

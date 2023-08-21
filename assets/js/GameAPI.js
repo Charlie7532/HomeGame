@@ -6,6 +6,8 @@ let gameData;
 let gameASN;
 const bypass = true;
 
+let try_counter=0;
+
 async function callGame(obj) {
 	let url = GameURL;
 	url += `?key=${obj.key}`;
@@ -24,12 +26,26 @@ async function callGame(obj) {
 			set_menu('success');
 		} else {
 			console.log('error: ', data.error);
-			set_menu('failure');
+
+			if (try_counter<3){
+				console.log("trying again automatically..");
+				console.log("counter: ",try_counter)
+				try_counter++;
+				tryAgain();
+			}else if (try_counter>=3){
+				try_counter=0;
+				set_menu('failure');
+			}
 		}
 	});
 
 	console.log('get Data:', R);
 	return R;
+}
+
+function tryAgain() {
+	console.log("trying again...")
+	callGame(gameData);
 }
 
 async function TEST() {
