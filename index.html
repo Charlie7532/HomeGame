@@ -37,7 +37,8 @@
 					<a href="#" onclick="set_menu(0)"><i class="material-icons">desktop_mac</i>HOME</a>
 				</li>
 				<li>
-					<a class="waves-effect" href="#" onclick="set_menu(10)"><i class="material-icons">dashboard</i>Dashboard</a>
+					<a class="waves-
+					effect" href="#" onclick="set_menu(10)"><i class="material-icons">dashboard</i>Dashboard</a>
 				</li>
 				<li><div class="divider"></div></li>
 				<li>
@@ -101,7 +102,7 @@
 				<section id="Rooms" class="vr-box box-1" style="display: none">
 					<h2>MY ROOMS</h2>
 					<hr />
-					<div class="c_box">
+					<div class="c_box mb-100">
 						<div id="rooms-container"></div>
 						<div class="c_box_bottom">
 							<a class="btn waves-effect waves-light left" onclick="back()" href="#b"><i class="material-icons left">arrow_back</i>Back</a>
@@ -167,8 +168,17 @@
 					</div>
 				</section>
 
-				<section id="success" class="vr-box box-1" style="display: none">
+				<section id="success" class="vr-box box-1" style="display: display">
 					<br /><br /><br />
+					<style>
+						.icon-transform{
+							transform: translateY(4px);
+						}
+						.text-align{
+							/* transform: translateY(-10px); */
+							height: auto;
+						}
+					</style>
 					<div class="c_box card">
 						<div class="c_box_content row center-align">
 							<!-- <i class="material-icons larger " style="color:#43a047; font-size: 5rem; ">check_circle</i> -->
@@ -177,9 +187,8 @@
 							<h2>success</h2>
 							<hr />
 							<p>The activation has been completed successfully now you can close this tab or perform a new task</p>
-
-							<a class="btn waves-effect waves-light" onclick="back()" href="#f"><i class="material-icons">arrow_back </i> Back to home</a>
-							<a class="btn waves-effect waves-light" onclick="start_game()" href="#f"><i class="material-icons">check </i> New Task </a>
+							<a class="btn waves-effect waves-light left" onclick="back()" href="#f"><i class="material-icons left">arrow_back </i> Back to home</a>
+							<a class="btn waves-effect waves-light left" onclick="start_game()" href="#f"><i class="material-icons left">check </i> New Task </a>
 
 						</div>
 					</div>
@@ -193,8 +202,8 @@
 						<div class="c_box_content row center-align">
 							<h2 style="color: red">Activation failed</h2>
 							<p></p>
-							<a class="btn waves-effect waves-light" onclick="back()" href="#f"><i class="material-icons">arrow_back </i> Back to home</a>
-							<a class="btn waves-effect waves-light" onclick="tryAgain()" href="#f"><i class="material-icons">refresh </i> Try again </a>
+							<a class="btn waves-effect waves-light left" onclick="back()" href="#f"><i class="material-icons icon-transform">arrow_back </i> Back to home</a>
+							<a class="btn waves-effect waves-light left" onclick="tryAgain()" href="#f"><i class="material-icons icon-transform">refresh </i> Try again </a>
 						</div>
 					</div>
 				</section>
