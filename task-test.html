@@ -1,0 +1,156 @@
+<section id="Tasks" class="vr-box box-1" style="display: block">
+    <style>
+        .title {
+            font-size: 1.5rem;
+        }
+        .point-text {
+            font-size: 1.5rem;
+            color: #2196f3;
+        }
+        .collection-item p {
+            color: gray;
+        }
+        .collection .collection-item.avatar{
+            min-height: 0;
+        }
+    </style>
+    <div class="c_box">
+        <div id="tasks-container">
+            <h2>TASKS</h2>
+            <hr />
+            <ul class="collapsible">
+                <li id="li-C001">
+                    <div class="collapsible-header">
+                        <i class="material-icons">filter_drama</i>
+                        Cleaning
+                        <span class="new badge">4</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul class="collection">
+                            <li id="T12001" class="collection-item avatar"  onclick="set_task('T12001')">
+                                <i class="material-icons circle" style="background-color: #2196f3">check</i>
+                                <span class="title">Change sheets</span>
+                                <p>Max per day 1</p>
+                                <a href="#!" class="secondary-content point-text">+3</a>
+                            </li>
+                            <li id="T12002" class="collection-item avatar" onclick="set_task('T12001')">
+                                <i class="material-icons circle purple">check</i>
+                                <span class="title">Polish and dust furniture</span>
+                                <p>Max per day 3</p>
+                                <a href="#!" class="secondary-content point-text">+1</a>
+                            </li>
+                            <li id="T12003" class="collection-item avatar" onclick="set_task('T12001')">
+                                <i class="material-icons circle green">check</i>
+                                <span class="title">Sweep</span>
+                                <p>Max per day N/A</p>
+                                <a href="#!" class="secondary-content point-text">+1</a>
+                            </li>
+                            <li id="T12004" class="collection-item avatar" onclick="set_task('T12001')">
+                                <i class="material-icons circle red">check</i>
+                                <span class="title">Fill water tank</span>
+                                <p>Max per day 1</p>
+                                <a href="#!" class="secondary-content point-text">+2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="li-C002">
+                    <div class="collapsible-header">
+                        <i class="material-icons">place</i>
+                        Organizing
+                        <span class="badge">1</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle">folder</i>
+                                <span class="title">Title</span>
+                                <p>+1</p>
+                                <a href="#!" class="secondary-content" style="color: gray"><i class="material-icons">grade</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="li-C003">
+                    <div class="collapsible-header">
+                        <i class="material-icons">filter_drama</i>
+                        Healthcare
+                        <span class="badge">4</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle">folder</i>
+                                <span class="title">Title</span>
+                                <p>
+                                    First Line <br />
+                                    Second Line
+                                </p>
+                                <a href="#!" class="secondary-content" style="color: gray"><i class="material-icons">grade</i></a>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle">folder</i>
+                                <span class="title">Title</span>
+                                <p>
+                                    First Line <br />
+                                    Second Line
+                                </p>
+                                <a href="#!" class="secondary-content" style="color: gray"><i class="material-icons">grade</i></a>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle green">insert_chart</i>
+                                <span class="title">Title</span>
+                                <p>
+                                    First Line <br />
+                                    Second Line
+                                </p>
+                                <a href="#!" class="secondary-content" style="color: gray"><i class="material-icons">grade</i></a>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle red">play_arrow</i>
+                                <span class="title">Title</span>
+                                <p>
+                                    First Line <br />
+                                    Second Line
+                                </p>
+                                <a href="#!" class="secondary-content" style="color: gray"><i class="material-icons">grade</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="li-C004">
+                    <div class="collapsible-header">
+                        <i class="material-icons">place</i>
+                        Mentalhealth
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle green">insert_chart</i>
+                                <span class="title">Title</span>
+                                <p>
+                                    First Line <br />
+                                    Second Line
+                                </p>
+                                <a href="#!" class="secondary-content" style="color: gray"><i class="material-icons">grade</i></a>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle red">play_arrow</i>
+                                <span class="title">Title</span>
+                                <p>
+                                    First Line <br />
+                                    Second Line
+                                </p>
+                                <a href="#!" class="secondary-content" style="color: gray"><i class="material-icons">grade</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="c_box_bottom">
+            <a class="btn waves-effect waves-light left" onclick="back()" href="#b"><i class="material-icons left">arrow_back</i>retroceder</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,245 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" href="css/style-lg.css" />
+
+		<title>HOME GAME</title>
+	</head>
+	<body>
+		<header>
+			<a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons menu-icon">menu</i></a>
+		</header>
+		<sidebar>
+			<ul id="slide-out" class="sidenav">
+				<li>
+					<div class="user-view">
+						<div class="background blue">
+							<!-- <img src="https://featherwood.co.za/wp-content/uploads/2016/09/Placeholder_Home_PropertySales.jpg" /> -->
+						</div>
+						<a href="#user"
+							><img
+								class="circle"
+								src="https://thumbs.dreamstime.com/b/placeholder-house-icon-flat-logo-design-icon-house-placeholder-house-icon-flat-logo-design-icon-house-eps-file-available-110592105.jpg"
+						/></a>
+						<a href="#name"><span class="white-text name">HOME GAME</span></a>
+						<a href="#email"><span class="white-text email">admin@main12.com</span></a>
+					</div>
+				</li>
+				<li>
+					<a href="#" onclick="set_menu(0)"><i class="material-icons">desktop_mac</i>HOME</a>
+				</li>
+				<li>
+					<a class="waves-effect" href="#" onclick="set_menu(10)"><i class="material-icons">dashboard</i>Dashboard</a>
+				</li>
+				<li><div class="divider"></div></li>
+				<li>
+					<a class="waves-effect" href="#" onclick="set_menu(10)"><i class="material-icons">data_usage</i>Estadisticas</a>
+				</li>
+				<li>
+					<a href="#" onclick="set_menu(0)"><i class="material-icons">settings</i>Settings</a>
+				</li>
+			</ul>
+		</sidebar>
+
+		<main>
+			<div class="container">
+				<section id="home" class="vr-box box-1" style="display: display">
+					<div class="c_box" style="background-color: transparent">
+						<div class="c_box_content row">
+							<h1 class="main-title">HOME GAME</h1>
+							<style>
+								.f_btn {
+									border-radius: 12px;
+									padding: 10px;
+									margin-top: 20px;
+									cursor: pointer;
+									opacity: 1;
+								}
+								.f_btn:hover {
+									opacity: 0.5;
+								}
+							</style>
+
+							<div id="Activation" class="col s12">
+								<div class="card blue f_btn" onclick="start_game()">
+									<h2 class="center-align" style="color: white">Play <i class="material-icons" style="font-size: larger; padding: 5px; transform: translateY(5px)">chevron_right</i></h2>
+								</div>
+							</div>
+
+							<div id="dashboard" class="col s6">
+								<div class="card hoverable">
+									<a class="card-image waves-effect waves-block waves-light" href="#dashboard">
+										<img src="assets/images/icons/dashboard-01.webp" alt="placeholder" style="width: 100%" />
+									</a>
+									<div class="card-content">
+										<span class="card-title truncate">Dashboard</span>
+									</div>
+								</div>
+							</div>
+							<div id="stadistics" class="col s6">
+								<div class="card hoverable">
+									<a class="card-image waves-effect waves-block waves-light" href="#stadistics">
+										<img src="assets/images/icons/statistics-01.webp" alt="placeholder" style="width: 100%" />
+									</a>
+									<div class="card-content">
+										<span class="card-title truncate">Dashboard</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="Rooms" class="vr-box box-1" style="display: none">
+					<h2>MY ROOMS</h2>
+					<hr />
+					<div class="c_box">
+						<div id="rooms-container"></div>
+						<div class="c_box_bottom">
+							<a class="btn waves-effect waves-light left" onclick="back()" href="#b"><i class="material-icons left">arrow_back</i>Back</a>
+						</div>
+					</div>
+				</section>
+
+				<section id="Tasks" class="vr-box box-1" style="display: none">
+					<style>
+						.title {
+							font-size: 1.5rem;
+						}
+						.point-text {
+							font-size: 1.5rem;
+							color: #2196f3;
+						}
+						.collection-item p {
+							color: gray;
+						}
+						.collection .collection-item.avatar {
+							min-height: 0;
+						}
+					</style>
+					<div class="c_box">
+						<h2>MY TASKS</h2>
+						<hr />
+						<div id="tasks-container"></div>
+						<div class="c_box_bottom">
+							<a class="btn waves-effect waves-light left" onclick="back()" href="#b"><i class="material-icons left">arrow_back</i>Back</a>
+						</div>
+					</div>
+				</section>
+
+				<section id="processing" class="vr-box box-1" style="display: none">
+					<div class="c_box">
+						<div class="c_box_content row center-align">
+							<!-- <h2>Estamos procesando los datos...</h2> -->
+						</div>
+						<style>
+							.preloader-ring {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+							}
+						</style>
+
+						<div class="preloader-ring">
+							<div class="preloader-wrapper big active">
+								<div class="spinner-layer spinner-blue-only">
+									<div class="circle-clipper left">
+										<div class="circle"></div>
+									</div>
+									<div class="gap-patch">
+										<div class="circle"></div>
+									</div>
+									<div class="circle-clipper right">
+										<div class="circle"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="success" class="vr-box box-1" style="display: none">
+					<br /><br /><br />
+					<div class="c_box card">
+						<div class="c_box_content row center-align">
+							<!-- <i class="material-icons larger " style="color:#43a047; font-size: 5rem; ">check_circle</i> -->
+							<img src="https://webstockreview.net/images/check-clipart-gif-animation-18.gif" style="width: 100%" alt="Check GIF" />
+
+							<h2>Activacion completada con exito</h2>
+							<hr />
+							<p>La activacion se ha completado exitosamente ahora puedes cerrar esta pestaña o realizar una nueva activacion</p>
+
+							<a class="btn waves-effect waves-light" onclick="back()" href="#f">Nueva Activacion</a>
+						</div>
+					</div>
+				</section>
+
+				<section id="failure" class="vr-box box-1" style="display: none">
+					<div class="c_box card">
+						<div class="c_box_content row center-align">
+							<h2 style="color: red">La activacion ha fallado</h2>
+							<p>Algo ha salido mal, por favor vuelve a intentarlo nuevamente si el problema persiste contactate con soporte tecnico.</p>
+							<a class="btn waves-effect waves-light" onclick="back()" href="#f">Intentar de nuevo</a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<section name="LOG-IN">
+			<div id="btn-login">
+				<a href="#login" class="btn-floating btn waves-effect waves-light modal-trigger pulse blue"><i class="material-icons">person</i></a>
+			</div>
+
+			<div id="login" class="modal">
+				<h5 class="modal-close">&#10005;</h5>
+				<div class="modal-content">
+					<h3 class="center">Please sign in</h3>
+
+					<form name="loginForm" id="loginForm" class="form" style="padding-left: 30px; padding-right: 30px">
+						<div class="center-align">
+							<div class="input-field box">
+								<i class="material-icons prefix">person</i>
+								<input type="text" id="userID" placeholder="Username" style="border: none" />
+								<!-- <label for="userID">Username</label> -->
+							</div>
+							<div class="input-field box">
+								<i class="material-icons prefix">lock</i>
+								<input type="password" id="pass" placeholder="Password" style="border: none" />
+								<!-- <label for="pass">Password</label> -->
+								<!-- <span class="helper-text" data-error="wrong user name or password" data-success="Loged in">Helper text</span> -->
+							</div>
+							<p id="wronfPass" style="color: red; display: none">wrong user name or password</p>
+							<div id="login_load" class="progress" style="display: none"><div class="indeterminate"></div></div>
+							<button name="login-submit" id="login-submit" class="btn blue" type="submit" style="border-radius: 20px; width: 100%">Log in<i class="material-icons right"></i></button><br /><br />
+							<!-- <a href="sign-up.html">Forgot password?</a><br /> -->
+							<!-- <b>Don't have an account? </b><a href="sign-up.html">Sign up</a> -->
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<script src="./assets/js/appLogIn.js" defer></script>
+		<script src="./assets/js/GameAPI.js" defer></script>
+		<script src="./assets/js/rooms-generator.js" defer></script>
+		<script src="./assets/js/test-array.js" defer></script>
+		<script src="./assets/js/task-generator.js" defer></script>
+		<script src="./assets/js/eventListeners.js" defer></script>
+		<script src="./assets/js/app.js" defer></script>
+
+		<!-- <script src="./assets/js/handleHashChange.js" defer></script> -->
+		<script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+		<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js" defer></script>
+	</body>
+</html>

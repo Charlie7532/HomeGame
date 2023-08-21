@@ -1,0 +1,563 @@
+/**
+ * Theme Name: MAIN12 VR
+ * Theme URI: 
+ * Version: 0.3.2
+ * Description: Main12 VR plataform.
+ * Tags: VR, Main12, Revelom
+ * Author: Juan C Botero
+ * Author URI: https://www.main12.com
+ *
+ * @format
+ */
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	height: fit-content;
+	background-color: #212121;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+
+	/* background-image: url('https://wallpapercave.com/wp/wp2466562.jpg'); */
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+header {
+	background-color: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 200;
+	padding: 10px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: black;
+}
+
+.menu-icon {
+	font-size: 35px;
+	color: white;
+}
+main {
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	padding: 60px 0 0 0;
+	z-index: 10;
+}
+.vr-box {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	width: 100%;
+	padding: 50px 10px;
+	opacity: 1;
+	transition: opacity 1s ease;
+
+	/* background-image: url('https://th.bing.com/th/id/R.8905e898ef0d1501663dd9203f58129e?rik=3W4Unbyn3d3XuQ&pid=ImgRaw&r=0'); */
+}
+.vr-box.hidden {
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.vr-box:not(.hidden) {
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+
+.c_box {
+	position: relative;
+	background-color: whitetrsmoke;
+	max-width: 1000px;
+	width: 100%;
+
+	margin: auto;
+	border-radius: 20px;
+}
+@media (min-width: 1000px) {
+	.c_box {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		padding: 20px;
+		min-height: 80vh;
+	}
+}
+
+.c_box .c_box_content {
+	min-height: 500px;
+}
+.c_box .c_box_bottom {
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+}
+.box-1 {
+	z-index: 50;
+}
+.box-2 {
+	z-index: 40;
+}
+.box-3 {
+	z-index: 30;
+}
+
+.c_box h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.c_box .center-text {
+	text-align: center;
+}
+
+h1 {
+	padding: 10px;
+	font-size: 2rem;
+}
+
+.main-title {
+	color: whitesmoke;
+	border-bottom: 1px solid;
+	margin-bottom: 20px;
+}
+
+.container {
+	max-width: 800px;
+}
+
+/* width */
+::-webkit-scrollbar {
+	background: transparent;
+	width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 5px grey;  */
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: gray;
+	/* background: darkgrey;  */
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(5, 68, 104);
+	border-radius: 10px;
+}
+
+h1 {
+	/* background-color: white; */
+	/* border-radius: 20px; */
+	color: whitesmoke;
+	text-align: center;
+	font-weight: bolder;
+}
+
+h2 {
+	font-size: x-large;
+	/* color: rgb(5, 68, 104); */
+	color: whitesmoke;
+	text-align: center;
+	font-weight: bolder;
+}
+
+h2.capsule {
+	background-color: white;
+	font-size: x-large;
+	color: rgb(5, 68, 104);
+	border-radius: 20px;
+	padding-left: 10px;
+	padding-right: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/* margin-bottom: 5px; */
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+h3 {
+	color: rgb(5, 68, 104);
+	font-size: large;
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin: 0;
+}
+h4 {
+	color: rgb(5, 68, 104);
+	font-size: medium;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px;
+}
+
+.btn-line {
+	color: rgb(5, 68, 104);
+	font-size: large;
+}
+
+.wrapper .sidebar {
+	/* background: rgb(5, 68, 104); */
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	flex-basis: 225px;
+	min-width: 225px;
+	width: 350px;
+	height: 100%;
+	padding: 10px 20px;
+	transition: all 0.5s ease;
+	/* overflow: auto; */
+}
+
+.wrapper.content {
+	background: white;
+	position: relative;
+	top: 0;
+	left: 350px;
+	right: 100px;
+	height: 100%;
+	padding: 0;
+	transition: all 0.5s ease;
+}
+
+.formbox {
+	background: white;
+	border-radius: 20px;
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 20px;
+	overflow-y: auto;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.results_table {
+	background: rgb(255 255 255 / 80%);
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 300px;
+	width: calc(80vw - 300px);
+	margin-right: 350px;
+	min-width: 300px;
+	margin: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 20px;
+	/* overflow: auto; */
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.fixTableHead {
+	overflow-y: auto;
+	height: 255px;
+	margin-top: 10px;
+}
+.fixTableHead thead th {
+	position: sticky;
+	top: 0;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	padding: 8px 15px;
+	/* border: 2px solid #529432; */
+}
+th {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	z-index: 500;
+	background: rgb(255, 255, 255, 90%);
+	margin-left: 20px;
+}
+.open_btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+.close_btn {
+	position: absolute;
+	z-index: 900;
+	top: 5px;
+	right: 5px;
+	padding: 0;
+	margin: 0px;
+}
+
+#map {
+	width: 100%;
+	height: 100vh;
+	overflow: none;
+	/* left: 300; */
+}
+
+.maptestoffset {
+	z-index: -10;
+	position: fixed;
+	left: 0;
+}
+
+#btn-login {
+	position: fixed;
+	z-index: 900;
+	top: 20px;
+	right: 20px;
+}
+
+.LogInBack {
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	z-index: 990;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px 20px;
+	transition: all 0.5s ease;
+}
+
+.LogIn {
+	background: white;
+	padding: 50px 50px;
+	position: fixed;
+	margin: auto;
+	top: 15%;
+	left: 50%;
+	border-radius: 20px;
+	width: 600px;
+	height: 400px;
+}
+
+a.btn {
+	border-radius: 25px;
+	background-color: #2196f3;
+	/* margin-top: 30%; */
+}
+
+.modal {
+	z-index: 900;
+	border-radius: 20px;
+	max-height: 100%;
+	max-width: 500px;
+	overflow: hidden;
+}
+
+input[type='submit'] {
+	width: 100%;
+	margin-top: 50px;
+}
+.modal-close {
+	position: absolute;
+	z-index: 900;
+	top: 10px;
+	right: 10px;
+	padding: 5px;
+	margin: 10px 10px;
+	border-radius: 20px;
+}
+
+.loadder {
+	position: fixed;
+	z-index: 100;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.margin20 {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#Pre-loader {
+	background: #ffffff url(https://vrmedia.ro/images/preloader.gif) no-repeat center;
+	background-size: 150%;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+}
+@media (min-width: 900px) {
+	#Pre-loader {
+		background-size: 50%;
+	}
+}
+
+.box {
+	border: 1px solid;
+	border-radius: 23px;
+	padding-right: 20px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	width: 100%;
+	height: 46px;
+}
+.box:hover {
+	opacity: 0.75;
+}
+
+.form_box {
+	border: 1px solid black;
+	border-radius: 20px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 50px;
+	font-size: large;
+}
+
+.form_box select {
+	color: black;
+	padding: 10px;
+
+	border: none;
+}
+
+.R20 {
+	border-radius: 20px;
+}
+.clean {
+	border: 0;
+	margin-bottom: 0;
+}
+.collapsible {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	margin: 0.5rem 0 1rem 0;
+}
+span {
+	padding: 0px;
+}
+
+/* td {
+	padding: 5px;
+} */
+
+.card {
+	border-radius: 12px;
+}
+
+.card .card-image {
+	/* height: 120px; */
+	border-radius: 12px 12px 0 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: auto;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	padding: 0 20px;
+}
+
+.card-content span.card-title {
+	text-align: center;
+	margin-bottom: 0 !important;
+}
+
+.card-content {
+	border-radius: 0 0 12px 12px !important;
+}
+
+/* @media (min-width: 600px) and (max-width: 999px) {
+	.card .card-image {
+		height: 150px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.card .card-image {
+		height: 200px;
+	}
+} */
+.card .card-content {
+	padding: 5px;
+}
+
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.input-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.input-group button {
+	width: 40px !important;
+	height: 40px !important;
+	border: none;
+	border-radius: 12px !important;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+input[type='number'] {
+	width: 80px;
+	font-size: 1rem;
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+}
+input#players {
+	width: 150px;
+	height: 40px;
+	border: 1px solid;
+	border-radius: 12px;
+	margin: 0;
+	padding: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.test {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	transform: translateX();
+}
