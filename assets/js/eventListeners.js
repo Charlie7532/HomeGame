@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		indicators: true,
 	});
 
+	getGameData('FULL001');
 	isloggedin();
-	waitForUserAndGetData();
 });
 async function makeAPICall(url) {
 	const result = await fetch(url);

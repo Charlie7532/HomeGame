@@ -110,7 +110,7 @@ function set_operation(value) {
 
 async function start_game() {
 	// set_menu('processing');
-	waitForUserAndGetData();
+	// waitForUserAndGetData();
 	buildRooms();
 	set_menu(1);
 }

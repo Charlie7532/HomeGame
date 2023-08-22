@@ -72,9 +72,8 @@ async function getGameData(key) {
 }
 
 let userDefined = false;
-
 function waitForUserAndGetData() {
-	if (typeof User !== 'undefined' && User !== null) {
+	if (isloggedin()) {
 		userDefined = true;
 		getGameData(User.key);
 	} else if (!userDefined) {
@@ -82,6 +81,3 @@ function waitForUserAndGetData() {
 		setTimeout(waitForUserAndGetData, 500); // Check every 100 milliseconds
 	}
 }
-
-// Call the function to start waiting for User to be defined
-// waitForUserAndGetData();
